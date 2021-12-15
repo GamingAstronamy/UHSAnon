@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>UHS Anonymous - {{ title }}</title>
+        {% else %}
+            <title>UHS Anonymous</title>
+        {% endif %}
+        <style src={{ url_for('static', filename='css/style.css') }}></style>
+    </head>
+</html>
+<body>
+    <div class='links'>
+        <a href='/home' class='links'>Home</a>
+        <a href='/home' class='links'>Home</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
