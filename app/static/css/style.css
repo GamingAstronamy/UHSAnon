@@ -1,6 +1,47 @@
+html {
+    background-color: #29292b;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin:0;
+}
 div.links{
-    display: inline-block;
-    margin: auto;
-    width: 20%;
+    border: 10px #3b3138 solid;
+    width: calc(100% - 20px);
+    height: auto;
     text-align: center;
+    background-color: #3b3138;
+}
+a.links:link, a.links:visited{
+    border: 5px #fcf8e9 solid;
+    border-radius: 5px;
+    color: #3b3138;
+    background-color: #fcf8e9;
+    font-size: 25px;
+    text-decoration: none;
+}
+a.links:hover {
+    border-color: #a48f4f;
+    background-color: #a48f4f;
+}
+hr.links {
+    margin:0;
+}
+
+h1.sign_in {
+    color: #fcf8e9;
+    text-align: center;
+}
+form.sign_in {
+    margin: auto;
+    border: 10px #3b3138 solid;
+    border-radius: 10px;
+
+    width: 20%;
+
+    color: #fcf8e9;
+    background-color: #3b3138;
+    text-align: center;
+
+    font-size: 25px;
 }

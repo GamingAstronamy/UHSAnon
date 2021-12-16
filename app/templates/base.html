@@ -6,13 +6,17 @@
         {% else %}
             <title>UHS Anonymous</title>
         {% endif %}
-        <style src={{ url_for('static', filename='css/style.css') }}></style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href={{ url_for('static', filename='css/style.css') }}>
     </head>
 </html>
 <body>
     <div class='links'>
-        <a href='/home' class='links'>Home</a>
-        <a href='/home' class='links'>Home</a>
+        <a href='/index' class='links'>Home</a>
+        <a href='/logout' class='links'>Logout</a>
     </div>
+    <hr class='links'>
     {% block content %}{% endblock %}
 </body>
