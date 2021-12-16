@@ -6,12 +6,12 @@
         {{ form.hidden_tag() }}
         <p>
             {{ form.email.label }}<br>
-            {{ form.email(size=32) }}
+            {{ form.email(class_='login_box') }}
         </p>
         <p>
             {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
+            {{ form.password(class_='login_box') }}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit(class_='login_submit') }}</p>
     </form>
 {% endblock %}

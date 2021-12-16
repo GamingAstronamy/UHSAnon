@@ -1,5 +1,5 @@
 html {
-    background-color: #29292b;
+    background-color: #262026;
     font-family: 'Roboto', sans-serif;
 }
 body {
@@ -9,7 +9,7 @@ div.links{
     border: 10px #3b3138 solid;
     width: calc(100% - 20px);
     height: auto;
-    text-align: center;
+    position: relative;
     background-color: #3b3138;
 }
 a.links:link, a.links:visited{
@@ -21,11 +21,18 @@ a.links:link, a.links:visited{
     text-decoration: none;
 }
 a.links:hover {
-    border-color: #a48f4f;
-    background-color: #a48f4f;
+    border-color: #997f91;
+    background-color: #997f91;
+}
+a#login_logout {
+    margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
 }
 hr.links {
     margin:0;
+    color: #fcf8e9;
 }
 
 h1.sign_in {
@@ -37,11 +44,38 @@ form.sign_in {
     border: 10px #3b3138 solid;
     border-radius: 10px;
 
-    width: 20%;
+    width: max(50%, 300px);
 
     color: #fcf8e9;
     background-color: #3b3138;
     text-align: center;
 
     font-size: 25px;
+}
+.login_box {
+    background-color: #262026;
+    color: #fcf8e9;
+
+    width: calc(100% - 10px);
+    height: 50px;
+
+    text-align: center;
+    font-size: 45px;
+}
+.login_box:-webkit-autofill::first-line,
+.login_box:-webkit-autofill,
+.login_box:-webkit-autofill:hover, 
+.login_box:-webkit-autofill:focus, 
+.login_box:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #262026 inset !important;
+    -webkit-text-fill-color:#fcf8e9 !important;
+}
+.login_submit {
+    background-color: #262026;
+    color: #fcf8e9;
+
+    height: 50px;
+
+    text-align: center;
+    font-size: 30px;
 }
