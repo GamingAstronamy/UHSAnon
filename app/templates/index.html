@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
+    <div class='posts'>
+        {% for post in posts %}
+            {{ render_template('post_template', username=post.query.get(1).get_username(), timestamp=post.query.get(1).timestamp.strftime('%A %m/%d/%Y %I:%M %p'), content=post.query.get(1).content) }}
+        {% endfor %}
+    </div>
 {% endblock %}

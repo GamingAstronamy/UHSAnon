@@ -1,14 +1,14 @@
 from flask_login.utils import logout_user
 from app import app
 from app.forms import LoginForm
-from app.models import User
+from app.models import User, Post
 from flask import render_template, redirect, url_for, send_from_directory
 from flask_login import login_required, login_user, current_user
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', posts=Post.query.all())
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -29,3 +29,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+@app.route('/post')
+def post():
+    return render_template('post_template.html', username=Post.query.get(1).get_username(), timestamp=Post.query.get(1).timestamp.strftime('%A %m/%d/%Y %I:%M %p'), content=Post.query.get(1).content)
